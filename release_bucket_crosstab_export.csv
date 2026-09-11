@@ -1,0 +1,7 @@
+release_bucket,is_returning_franchise,title_count,total_hours_viewed,avg_hours_viewed_per_title
+catalog,false,4331,20151500000.0,4652851.535442161
+catalog,true,1234,10172300000.0,8243354.943273906
+new_release,false,400,12704700000.0,31761750.0
+new_release,true,81,5236100000.0,64643209.87654321
+unknown_release_date,false,9180,28390800000.0,3092679.7385620917
+unknown_release_date,true,2144,20149200000.0,9397947.76119403

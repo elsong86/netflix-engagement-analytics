@@ -1,0 +1,14 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables / secrets (if you ever add a .env file for TMDB_API_KEY)
+.env
+
+# macOS
+.DS_Store
+
+# Tableau temp/backup files
+*.twbr
+*.tmp
