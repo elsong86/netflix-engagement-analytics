@@ -15,8 +15,8 @@ Output: netflix_quarterly_financials.csv
 
 import pandas as pd
 
-SOURCE_FILE = "Q2-26-Website-Financials.xlsx"
-OUTPUT_FILE = "netflix_quarterly_financials.csv"
+SOURCE_FILE = "data/raw/Q2-26-Website-Financials.xlsx"
+OUTPUT_FILE = "data/processed/netflix_quarterly_financials.csv"
 
 QUARTER_LABELS = ["Q1'25", "Q2'25", "Q3'25", "Q4'25", "Q1'26", "Q2'26"]
 

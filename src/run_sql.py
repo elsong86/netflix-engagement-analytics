@@ -18,7 +18,7 @@ sql_file = sys.argv[1]
 with open(sql_file, "r") as f:
     query = f.read()
 
-con = duckdb.connect("netflix.duckdb")
+con = duckdb.connect("data/processed/netflix.duckdb")
 result = con.execute(query).fetchdf()
 con.close()
 

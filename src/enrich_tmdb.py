@@ -13,8 +13,7 @@ Design notes:
   script safe to stop and restart without wasting API calls or losing work.
 - Processed in chunks (BATCH_SIZE), writing to the cache after every chunk,
   not just at the very end.
-- Requires TMDB_API_KEY as an environment variable -- never hardcode a key
-  in a script you're planning to commit to a public repo.
+- Requires TMDB_API_KEY as an environment variable 
 """
 
 import os
@@ -71,8 +70,8 @@ def clean_search_title(raw_title):
 
     return primary, year_hint
 
-STAGING_FILE = "netflix_engagement_staging.csv"
-CACHE_FILE = "tmdb_enrichment_cache.csv"
+STAGING_FILE = "data/processed/netflix_engagement_staging.csv"
+CACHE_FILE = "data/processed/tmdb_enrichment_cache.csv"
 
 BASE_URL = "https://api.themoviedb.org/3"
 API_KEY = os.environ.get("TMDB_API_KEY")

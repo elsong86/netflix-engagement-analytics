@@ -9,9 +9,9 @@ Output: netflix_engagement_final.csv
 
 import pandas as pd
 
-STAGING_FILE = "netflix_engagement_staging.csv"
-CACHE_FILE = "tmdb_enrichment_cache.csv"
-OUTPUT_FILE = "netflix_engagement_final.csv"
+STAGING_FILE = "data/processed/netflix_engagement_staging.csv"
+CACHE_FILE = "data/processed/tmdb_enrichment_cache.csv"
+OUTPUT_FILE = "data/processed/netflix_engagement_final.csv"
 
 FINAL_STATUSES = {"exact", "fuzzy", "no_match"}
 

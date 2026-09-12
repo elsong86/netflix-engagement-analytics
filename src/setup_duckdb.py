@@ -7,18 +7,18 @@ against this database, not in pandas.
 
 import duckdb
 
-con = duckdb.connect("netflix.duckdb")
+con = duckdb.connect("data/processed/netflix.duckdb")
 
 con.execute("""
     CREATE OR REPLACE TABLE titles AS
-    SELECT * FROM read_csv_auto('netflix_engagement_analysis_ready.csv')
+    SELECT * FROM read_csv_auto('data/processed/netflix_engagement_analysis_ready.csv')
 """)
 titles_count = con.execute("SELECT COUNT(*) FROM titles").fetchone()[0]
 print(f"Loaded {titles_count} rows into netflix.duckdb (table: titles)")
 
 con.execute("""
     CREATE OR REPLACE TABLE quarterly_financials AS
-    SELECT * FROM read_csv_auto('netflix_quarterly_financials.csv')
+    SELECT * FROM read_csv_auto('data/processed/netflix_quarterly_financials.csv')
 """)
 financials_count = con.execute("SELECT COUNT(*) FROM quarterly_financials").fetchone()[0]
 print(f"Loaded {financials_count} rows into netflix.duckdb (table: quarterly_financials)")

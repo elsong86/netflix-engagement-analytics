@@ -11,8 +11,8 @@ Output: netflix_engagement_analysis_ready.csv
 import re
 import pandas as pd
 
-INPUT_FILE = "netflix_engagement_final.csv"
-OUTPUT_FILE = "netflix_engagement_analysis_ready.csv"
+INPUT_FILE = "data/processed/netflix_engagement_final.csv"
+OUTPUT_FILE = "data/processed/netflix_engagement_analysis_ready.csv"
 
 # The report covers Jan 1 - Jun 30, 2026. Anything with a release_date on
 # or after this counts as "new" for this report period; anything earlier

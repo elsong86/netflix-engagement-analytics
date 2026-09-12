@@ -1,12 +1,12 @@
 """
 Diagnostic pass on the final joined dataset. Doesn't modify anything --
-just surfaces whether the year-filter bug we found and fixed for shows
+just surfaces whether the year-filter bug that was found and fixed for shows,
 might also be affecting movies, plus a general quality spot-check.
 """
 
 import pandas as pd
 
-df = pd.read_csv("netflix_engagement_final.csv")
+df = pd.read_csv("data/processed/netflix_engagement_final.csv")
 
 print("=== Match status by content_type ===")
 print(df.groupby("content_type")["match_status"].value_counts())

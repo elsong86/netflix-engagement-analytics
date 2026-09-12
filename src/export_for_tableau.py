@@ -33,32 +33,32 @@ def country_code_to_name(code):
     return getattr(country, "common_name", None) or country.name
 
 
-con = duckdb.connect("netflix.duckdb")
+con = duckdb.connect("data/processed/netflix.duckdb")
 
 # Full tables, for panels that need the raw title-level or quarterly detail
-con.execute("COPY titles TO 'titles_export.csv' (HEADER, DELIMITER ',')")
-con.execute("COPY quarterly_financials TO 'quarterly_financials_export.csv' (HEADER, DELIMITER ',')")
+con.execute("COPY titles TO 'exports/titles_export.csv' (HEADER, DELIMITER ',')")
+con.execute("COPY quarterly_financials TO 'exports/quarterly_financials_export.csv' (HEADER, DELIMITER ',')")
 
 # Origin-country ranking: routed through pandas (rather than a direct
 # DuckDB COPY, like the others) specifically to add the country_name
 # column below.
-with open("origin_country_ranking.sql") as f:
+with open("sql/origin_country_ranking.sql") as f:
     query = f.read().strip().rstrip(";")
     hours_ranking_df = con.execute(query).fetchdf()
 
 hours_ranking_df["country_name"] = hours_ranking_df["primary_origin_country"].apply(country_code_to_name)
-hours_ranking_df.to_csv("origin_country_ranking_export.csv", index=False)
+hours_ranking_df.to_csv("exports/origin_country_ranking_export.csv", index=False)
 
-with open("origin_country_ranking_by_views.sql") as f:
+with open("sql/origin_country_ranking_by_views.sql") as f:
     query = f.read().strip().rstrip(";")
     views_ranking_df = con.execute(query).fetchdf()
 
 views_ranking_df["country_name"] = views_ranking_df["primary_origin_country"].apply(country_code_to_name)
-views_ranking_df.to_csv("origin_country_ranking_by_views_export.csv", index=False)
+views_ranking_df.to_csv("exports/origin_country_ranking_by_views_export.csv", index=False)
 
-with open("release_bucket_crosstab.sql") as f:
+with open("sql/release_bucket_crosstab.sql") as f:
     query = f.read().strip().rstrip(";")
-    con.execute(f"COPY ({query}) TO 'release_bucket_crosstab_export.csv' (HEADER, DELIMITER ',')")
+    con.execute(f"COPY ({query}) TO 'exports/release_bucket_crosstab_export.csv' (HEADER, DELIMITER ',')")
 
 con.close()
 

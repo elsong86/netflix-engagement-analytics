@@ -1,8 +1,8 @@
 import pandas as pd
 import re
 
-SOURCE_FILE = "Netflix-s_What_We_Watched_Report_2026Jan-Jun__1_.xlsx"
-OUTPUT_FILE = "netflix_engagement_staging.csv"
+SOURCE_FILE = "data/raw/Netflix-s_What_We_Watched_Report_2026Jan-Jun__1_.xlsx"
+OUTPUT_FILE = "data/processed/netflix_engagement_staging.csv"
 
 # Real headers live on row 6 (1-indexed) -> header=5 in pandas (0-indexed)
 HEADER_ROW = 5
