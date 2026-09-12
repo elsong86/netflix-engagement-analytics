@@ -4,7 +4,7 @@ A content-engagement analysis of Netflix's public H1 2026 "What We Watched" repo
 
 [![Open Dashboard](https://img.shields.io/badge/Tableau-Live%20Dashboard-blue?logo=tableau)](https://public.tableau.com/app/profile/ellis.song3694/viz/NetflixEngagementAnalyticsQ1Q22026/Dashboard1)
 
-[![Dashboard preview](dashboard_preview.png)](https://public.tableau.com/app/profile/ellis.song3694/viz/NetflixEngagementAnalyticsQ1Q22026/Dashboard1)
+[![Dashboard preview](assets/dashboard_preview.png)](https://public.tableau.com/app/profile/ellis.song3694/viz/NetflixEngagementAnalyticsQ1Q22026/Dashboard1)
 
 ## What this project does
 
