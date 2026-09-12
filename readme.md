@@ -1,6 +1,6 @@
 # Netflix Engagement Analytics
 
-A content-engagement analysis of Netflix's public H1 2026 "What We Watched" report, built as a portfolio project targeting Data Analyst / Analytics Engineering roles in sports & entertainment media (developed alongside an application to AEG Presents' Data Analyst, Strategy Group role).
+A content-engagement analysis of Netflix's public H1 2026 "What We Watched" report, built as a portfolio project targeting Data Analyst / Analytics Engineering roles in sports & entertainment media. 
 
 [![Open Dashboard](https://img.shields.io/badge/Tableau-Live%20Dashboard-blue?logo=tableau)](https://public.tableau.com/app/profile/ellis.song3694/viz/NetflixEngagementAnalyticsQ1Q22026/Dashboard1)
 
